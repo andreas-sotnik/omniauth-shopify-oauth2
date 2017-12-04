@@ -44,7 +44,8 @@ module OmniAuth
       end
 
       def valid_site?
-        (/(localhost|127.0.0.1)/ =~ options[:client_options][:site]) || (!!(/\A(https|http)\:\/\/[a-zA-Z0-9][a-zA-Z0-9\-]*\.#{Regexp.quote(options[:myshopify_domain])}[\/]?\z/ =~ options[:client_options][:site]))
+        true
+        # (/(localhost|127.0.0.1)/ =~ options[:client_options][:site]) || (!!(/\A(https|http)\:\/\/[a-zA-Z0-9][a-zA-Z0-9\-]*\.#{Regexp.quote(options[:myshopify_domain])}[\/]?\z/ =~ options[:client_options][:site]))
       end
 
       def valid_signature?
